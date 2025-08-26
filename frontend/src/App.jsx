@@ -1,11 +1,11 @@
 import React from 'react'
-import VerificationPage from './pages/verify/VerificationPage'
 import Home from './pages/Home/Home'
 import Access from './pages/Access/Access'
+import Verification from "./pages/verify/Verification"
 export default function App() {
   return (
     <div>
-      <Access/>
+      <Home/>
     </div>
   )
 }
