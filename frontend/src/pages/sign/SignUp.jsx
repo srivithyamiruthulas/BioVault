@@ -27,7 +27,10 @@ export default function SignUp() {
 
       // ✅ Redirect to access page after successful signup
       if (res.status === 201 || res.status === 200) {
-        navigate("/access");
+         localStorage.setItem("token", res.data.token);
+         localStorage.setItem("userId", res.data.user._id);
+         setMessage("Signup successful!");
+         navigate("/access");
       }
     } catch (error) {
       setMessage(error.response?.data?.message || "Signup failed");

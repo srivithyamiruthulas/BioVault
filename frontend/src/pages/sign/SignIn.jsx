@@ -21,6 +21,7 @@ export default function SignIn() {
       if (res.status === 200) {
         // Save token if needed
         localStorage.setItem("token", res.data.token);
+        localStorage.setItem("userId", res.data.user._id);
         navigate("/access"); // 🔥 Redirect to access page
       }
     } catch (err) {
