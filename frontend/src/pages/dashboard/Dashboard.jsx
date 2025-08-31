@@ -16,18 +16,21 @@ export default function Dashboard() {
         Bio-Digital Identity Vault
       </h1>
       <p className="text-xl text-gray-300 max-w-3xl text-center mb-12 leading-relaxed animate-slideUp">
-        Welcome to the <span className="text-blue-400 font-bold">future of digital identity</span> —
-        a blockchain-powered platform for secure, privacy-first biometric data
+        Welcome to the{" "}
+        <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-500 bg-clip-text text-transparent font-extrabold animate-breatheGlow">
+          future of digital identity
+        </span>{" "}
+        — a blockchain-powered platform for secure, privacy-first biometric data
         storage and passwordless authentication.
       </p>
 
       {/* Image Section */}
-      <div className="relative w-full max-w-4xl mb-16">
+      <div className="relative w-full max-w-3xl mb-16">
         <div className="absolute inset-0 bg-blue-500 blur-3xl opacity-10 rounded-3xl" />
         <img
           src="/finger2.png"
           alt="Biometric Illustration"
-          className="w-full h-auto   transition-transform duration-700 hover:scale-105"
+          className="w-full h-auto transition-transform duration-700 hover:scale-105 rounded-2xl"
         />
       </div>
 
@@ -36,34 +39,60 @@ export default function Dashboard() {
         <div className="bg-white/10 backdrop-blur-lg border border-white/20 p-8 rounded-3xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-500">
           <h2 className="text-3xl font-semibold mb-4 text-blue-400">Why Choose Us?</h2>
           <p className="text-gray-300 text-lg">
-            We bring you **unmatched security** with blockchain technology. 
-            Your biometric identity is **tamper-proof, decentralized, and verifiable**. 
+            We bring you{" "}
+            <span className="text-blue-400 font-bold animate-breatheGlow">
+              unmatched security
+            </span>{" "}
+            with blockchain technology. Your biometric identity is{" "}
+            <span className="text-purple-400 font-bold animate-breatheGlow">
+              tamper-proof, decentralized, and verifiable
+            </span>.
           </p>
         </div>
         <div className="bg-white/10 backdrop-blur-lg border border-white/20 p-8 rounded-3xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-500">
           <h2 className="text-3xl font-semibold mb-4 text-green-400">How It Works</h2>
           <p className="text-gray-300 text-lg">
-            Your biometric data is **hashed & encrypted** before being stored on 
-            a blockchain, ensuring **complete privacy and security**. 
+            Your biometric data is{" "}
+            <span className="text-green-400 font-bold animate-breatheGlow">
+              hashed & encrypted
+            </span>{" "}
+            before being stored on a blockchain, ensuring{" "}
+            <span className="text-yellow-400 font-bold animate-breatheGlow">
+              complete privacy and security
+            </span>.
           </p>
         </div>
       </div>
 
       {/* Action Buttons */}
-      <div className="flex gap-8">
+      <div className="flex gap-12">
         <button
           onClick={() => navigate("/access")}
           className="px-10 py-4 bg-gradient-to-r from-blue-950 to-blue-900 rounded-full text-xl font-bold hover:scale-110 transition-transform duration-300 shadow-lg hover:shadow-[0_0_20px_#3b82f6]"
         >
-        Access Vault
+          Access Vault
         </button>
         <button
           onClick={() => navigate("/verification")}
-          className="px-10 py-4 bg-gradient-to-r  from-blue-950 to-blue-900 rounded-full text-xl font-bold hover:scale-110 transition-transform duration-300 shadow-lg hover:shadow-[0_0_20px_#3b82f6]"
+          className="px-10 py-4 bg-gradient-to-r from-blue-950 to-blue-900 rounded-full text-xl font-bold hover:scale-110 transition-transform duration-300 shadow-lg hover:shadow-[0_0_20px_#3b82f6]"
         >
           Verify Identity
         </button>
       </div>
+
+    
+      <style>
+        {`
+          @keyframes breatheGlow {
+            0%, 100% { opacity: 1; text-shadow: 0 0 8px rgba(255,255,255,0.4); }
+            50% { opacity: 0.85; text-shadow: 0 0 18px rgba(255,255,255,0.7); }
+          }
+          .animate-breatheGlow {
+            animation: breatheGlow 3s ease-in-out infinite;
+            display: inline-block;
+          }
+        `}
+      </style>
     </div>
   );
 }
