@@ -1,39 +1,44 @@
-function CollegeStore({ onNext,onBack }) {
-  return (
-    <div className="bg-blue-900 flex flex-col items-center  space-y-12 py-16 px-12 rounded-2xl">
-      
-      {/* Heading */}
-      <div className="space-y-4 text-center">
-        <h2 className="text-2xl font-semibold">Marvel at the storage</h2>
-        <p className="text-gray-300">
-          Store once. Trust forever. The decentralized fingerprint way
-        </p>
-      </div>
+import { Building2 } from "lucide-react";
 
+function CollegeStore({ onNext, onBack }) {
+  return (
+    <div className="flex flex-col items-center justify-center min-h-screen w-full bg-gradient-to-b from-[#192048] via-[#0d1640] to-[#080e31] text-white px-8 md:px-16">
       
-      {/* Card */}
-      <div className="p-10 space-y-5 flex flex-col justify-center rounded-2xl bg-white/10 backdrop-blur-lg shadow-lg">
-        <input
-          type="text"
-          placeholder="College's private ID"
-          className="w-64 px-4 py-2 rounded-lg mb-4 bg-gray-800 text-white "
-        />
-        <button
-          onClick={onNext}
-          className="w-64 px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 transition"
-        >
-          Store
-        </button>
+      {/* Header */}
+      <h2 className="text-4xl font-bold text-center mb-4">College Storage</h2>
+      <p className="text-lg text-gray-300 text-center max-w-2xl mb-10">
+        Trusted decentralized storage for institutional identity
+      </p>
+
+      {/* Inputs + Buttons */}
+      <div className="w-full max-w-md space-y-6">
+        <div>
+          <label className="flex items-center gap-2 mb-2 text-base md:text-lg font-medium">
+            <Building2 size={22} /> College Private ID
+          </label>
+          <input
+            type="text"
+            placeholder="Enter College Private ID"
+            className="w-full px-4 py-3 rounded-md bg-white/20 text-black outline-none"
+          />
+        </div>
+
+        <div className="flex gap-6">
+          <button
+            onClick={onNext}
+            className="flex-1 py-3 rounded-md font-medium text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:scale-105 transition-transform duration-300 shadow-md"
+          >
+            Store
+          </button>
+          <button
+            onClick={onBack}
+            className="flex-1 py-3 rounded-md font-medium text-white bg-gradient-to-r from-purple-600 to-blue-600 hover:scale-105 transition-transform duration-300 shadow-md"
+          >
+            Back
+          </button>
+        </div>
       </div>
-      <button
-          onClick={onBack}
-          className="w-64 px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 transition"
-        >
-           Back
-        </button>
-      
     </div>
-    
   );
 }
 
