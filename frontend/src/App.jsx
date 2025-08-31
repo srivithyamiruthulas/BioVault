@@ -14,7 +14,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/access" element={<Access />} />
 
-        {/* 🔥 Add /* so nested routes work */}
+        {/*Add /* so nested routes work */}
         <Route path="/verification/*" element={<Verification />} />
 
         <Route path="/signin" element={<SignIn />} />
