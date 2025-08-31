@@ -19,7 +19,7 @@ function FingerprintRegister({ onNext }) {
           <input
             type="text"
             placeholder="Enter Student Registration Number..."
-            className="w-full px-4 py-3 rounded-md bg-white/20 text-black outline-none"
+            className="w-full px-4 py-3 rounded-md bg-white/20 text-white outline-none"
           />
         </div>
 
