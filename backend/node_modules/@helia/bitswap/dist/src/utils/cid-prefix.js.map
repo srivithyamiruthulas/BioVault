@@ -1,0 +1,1 @@
+{"version":3,"file":"cid-prefix.js","sourceRoot":"","sources":["../../../src/utils/cid-prefix.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,MAAM,qBAAqB,CAAA;AAGpC,MAAM,UAAU,WAAW,CAAE,GAAQ;IACnC,OAAO,EAAE,CAAC;QACR,GAAG,CAAC,OAAO,EAAE,GAAG,CAAC,IAAI,EAAE,GAAG,CAAC,SAAS,CAAC,IAAI,EAAE,GAAG,CAAC,SAAS,CAAC,MAAM,CAAC,UAAU;KAC3E,CAAC,CAAA;AACJ,CAAC"}
