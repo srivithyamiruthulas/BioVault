@@ -22,7 +22,7 @@ export default function SignIn() {
         // Save token if needed
         localStorage.setItem("token", res.data.token);
         localStorage.setItem("userId", res.data.user._id);
-        navigate("/access"); // 🔥 Redirect to access page
+         navigate("/dashboard");
       }
     } catch (err) {
       console.error(err);

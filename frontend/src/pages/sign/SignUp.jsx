@@ -30,7 +30,7 @@ export default function SignUp() {
          localStorage.setItem("token", res.data.token);
          localStorage.setItem("userId", res.data.user._id);
          setMessage("Signup successful!");
-         navigate("/access");
+        navigate("/dashboard");
       }
     } catch (error) {
       setMessage(error.response?.data?.message || "Signup failed");

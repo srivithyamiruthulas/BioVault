@@ -7,14 +7,14 @@ import Verification from "./pages/verify/Verification";
 import SignIn from "./pages/sign/SignIn";
 import SignUp from "./pages/sign/SignUp";
 import Success from "./components/AccessComponents/Success"; // ✅ Added import
-
+import Dashboard from "./pages/dashboard/Dashboard";
 export default function App() {
   return (
     <Router>
       <Routes>
         {/* Home page */}
         <Route path="/" element={<Home />} />
-
+         <Route path="/dashboard" element={<Dashboard />} />
         {/* Access page */}
         <Route path="/access" element={<Access />} />
 
